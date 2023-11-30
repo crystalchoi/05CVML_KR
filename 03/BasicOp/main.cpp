@@ -49,6 +49,7 @@ void SizeOp()
 
 	cout << "sz3: " << sz3 << endl;
 	cout << "sz4: " << sz4 << endl;
+	cout << "area: " << area1 << endl;
 }
 
 void RectOp()
@@ -93,6 +94,6 @@ void StringOp()
 	for (int i = 0; i < 3; i++) {
 		String filename = format("data%02d.bmp", i + 1);
 		cout << filename << endl;
-		imgs[i] = imread(filename);
+//		imgs[i] = imread(filename);
 	}
 }

@@ -102,12 +102,15 @@ void MatOp3()
 void MatOp4()
 {
 	Mat mat1 = Mat::zeros(3, 4, CV_8UC1);
+    cout << "init mat1:\n" << mat1 << endl;
 
 	for (int j = 0; j < mat1.rows; j++) {
 		for (int i = 0; i < mat1.cols; i++) {
 			mat1.at<uchar>(j, i)++;
 		}
 	}
+
+    cout << "++ mat1:\n" << mat1 << endl;
 
 	for (int j = 0; j < mat1.rows; j++) {
 		uchar* p = mat1.ptr<uchar>(j);
@@ -116,11 +119,13 @@ void MatOp4()
 		}
 	}
 
+    cout << "ptr++ mat1:\n" << mat1 << endl;
+
 	for (MatIterator_<uchar> it = mat1.begin<uchar>(); it != mat1.end<uchar>(); ++it) {
 		(*it)++;
 	}
 
-	cout << "mat1:\n" << mat1 << endl;
+	cout << "start/end++ mat1:\n" << mat1 << endl;
 }
 
 void MatOp5()
